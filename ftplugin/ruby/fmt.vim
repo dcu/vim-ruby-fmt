@@ -7,7 +7,7 @@ if !exists("g:ruby_fmt_commands")
 endif
 
 if !exists("g:ruby_fmt_script_path")
-    let g:ruby_fmt_script_path = expand('<sfile>:p:h') . '../../misc/autocorrect_formatter.rb'
+    let g:ruby_fmt_script_path = expand('<sfile>:p:h') . '/../../misc/autocorrect_formatter.rb'
 endif
 
 if !exists("g:rubyfmt_command")
