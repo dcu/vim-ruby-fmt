@@ -16,7 +16,7 @@ endif
 
 function! s:RubyFormat()
     let view = winsaveview()
-    silent execute "!" . g:rubyfmt_command . " %"
+    silent execute "%!" . g:rubyfmt_command . " %"
     write
     call winrestview(view)
 endfunction
