@@ -25,6 +25,10 @@ Finally, within your ```.vimrc``` add the following for autocorrect on save (exp
     " should already have the first line, adding the second
     filetype plugin indent on
     autocmd FileType ruby autocmd BufWritePost <buffer> Fmt
+    
+If you want to be safer, I'd recommend binding the ```Fmt``` call to a map, like so:
+
+    nmap ff :Fmt<CR>
 
 ## Experimental
 
