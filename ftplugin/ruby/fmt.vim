@@ -16,7 +16,7 @@ endif
 
 function! s:RubyFormat()
     let view = winsaveview()
-    silent execute "!" . g:rubyfmt_command . " " . bufname("%")
+    silent execute "%!" . g:rubyfmt_command
     if v:shell_error
         let errors = []
         for line in getline(1, line('$'))
