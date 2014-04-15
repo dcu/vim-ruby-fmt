@@ -17,15 +17,17 @@ That's what this does for Vim and Ruby.
 I use [Vundle](https://github.com/gmarik/Vundle.vim) so it is as easy as adding to my vundles.vim:
 
     Bundle 'zhubert/vim-ruby-fmt'
-    
+
 and running ```:BundleInstall``` from within Vim.
 
 Finally, within your ```.vimrc``` add the following for autocorrect on save (experimental, double check things!):
 
     " should already have the first line, adding the second
     filetype plugin indent on
-    autocmd FileType ruby autocmd BufWritePre <buffer> Fmt
+    autocmd FileType ruby autocmd BufWritePost <buffer> Fmt
 
 ## Experimental
 
-This is super alpha, so it doesn't currently support the ```.rubocop.yml``` config file (opting instead to run all cops)
+This can mess up your code!
+
+There is also an annoying flicker from the redraw, which when I have more time I can figure out.
