@@ -20,10 +20,10 @@ function! s:RubyFormat()
     let default_srr = &srr
     set srr=>%s
 
-    silent execute "!" . "cp % /tmp/%.tmp"
-    silent execute "%!" . g:rubyfmt_command . " /tmp/%.tmp; cat /tmp/%.tmp"
+    silent execute "!" . "cp % /tmp/%:t.tmp"
+    silent execute "%!" . g:rubyfmt_command . " /tmp/%:t.tmp; cat /tmp/%:t.tmp"
 
-    silent execute "!rm /tmp/%.tmp"
+    silent execute "!rm /tmp/%:t.tmp"
 
     let &srr = default_srr
 
