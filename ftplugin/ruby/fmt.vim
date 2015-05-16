@@ -30,7 +30,4 @@ function! s:RubyFormat()
     call winrestview(view)
 endfunction
 
-nmap ff :Fmt<CR>
-autocmd BufWritePre <buffer> Fmt
-
 let b:did_ftplugin_ruby_fmt = 1

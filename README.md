@@ -24,8 +24,8 @@ Finally, within your ```.vimrc``` add the following for autocorrect on save (exp
 
     " should already have the first line, adding the second
     filetype plugin indent on
-    autocmd FileType ruby autocmd BufWritePost <buffer> Fmt
-    
+    autocmd FileType ruby autocmd BufWritePre <buffer> Fmt
+
 If you want to be safer, I'd recommend binding the ```Fmt``` call to a map, like so:
 
     nmap ff :Fmt<CR>
@@ -34,4 +34,3 @@ If you want to be safer, I'd recommend binding the ```Fmt``` call to a map, like
 
 This can mess up your code!
 
-There is also an annoying flicker from the redraw, which when I have more time I can figure out.
